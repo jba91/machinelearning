@@ -5,6 +5,7 @@
 * We are only interested in the field Date Occurred / Area ID / Crime ID
 * The 3rd field, 5th field, and 8th field
   * function reads in crime.csv and creates a new file called crime2.csv containing just 3rd/5th/8th fields
+* convert Mon-Day-Year to days since epoch (1/1/1970)
 
 
 
