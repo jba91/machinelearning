@@ -20,8 +20,6 @@ def load_csv(fname):
                 continue
             if count != 0:
                 # create list containing Date/AreaID/CrimeCode
-                #mystr = row[2] + ',' + row[4] + ',' + row[7]
-                #mystr.append(row[2] + ',' + row[4] + ',' + row[7])
                 mystr.append(row[2])
                 mystr.append(row[4])
                 mystr.append(row[7])
@@ -30,11 +28,22 @@ def load_csv(fname):
                 count = count + 1
             else:
                 count = count + 1
-    ### print(ds)
-    return ds
+        return ds
 
+# convert string column to int
+def str_column_to_int(ds, column):
+    for row in ds:
+        row[column] = int(row[column].strip())
+    
 # Load crime data into list "ds"
 fname = 'crime.csv'
 ds = load_csv(fname)
 print( 'Loaded data file {0} with {1} rows and {2} columns ' .format(fname, len(ds), len(ds[0])))
 print(ds)
+
+# convert strings in 2nd and 3rd columns to int
+for i in range(1,3):
+    print("i =",i)
+    str_column_to_int(ds, i)
+print(ds)
+
