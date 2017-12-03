@@ -7,6 +7,11 @@
   * function reads in crime.csv and creates a new file called crime2.csv containing just 3rd/5th/8th fields
 * convert Mon-Day-Year to days since epoch (1/1/1970)
 
+* make_data_file.py works against Crime_Data_from_2010_to_Present.csv
+  * creates crime.csv
+  
+  
+
 
 
 
